@@ -10,7 +10,7 @@ module.exports = function globParent(str) {
 	if (isWin32 && str.indexOf('/') < 0) str = str.split('\\').join('/');
 
 	// special case for strings ending in enclosure containing path separator
-	if (/[\{\[].*[\/]*.*[\}\]]$/.test(str)) str += '/';
+	if (/[\{\[].*[\}\]]$/.test(str)) str += '/';
 
 	// preserves full path in case of trailing path separator
 	str += 'a';

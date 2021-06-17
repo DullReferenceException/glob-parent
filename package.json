@@ -4,8 +4,8 @@
   "description": "Strips glob magic from a string to provide the parent directory path",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul test node_modules/mocha/bin/_mocha",
-    "ci-test": "istanbul cover _mocha && cat ./coverage/lcov.info | coveralls"
+    "test": "nyc mocha",
+    "ci-test": "nyc --reporter=lcov mocha && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -35,8 +35,8 @@
     "path-dirname": "^1.0.0"
   },
   "devDependencies": {
-    "coveralls": "^2.11.2",
-    "istanbul": "^0.3.5",
-    "mocha": "^2.1.0"
+    "coveralls": "^3.1.0",
+    "mocha": "^9.0.0",
+    "nyc": "^15.1.0"
   }
 }
